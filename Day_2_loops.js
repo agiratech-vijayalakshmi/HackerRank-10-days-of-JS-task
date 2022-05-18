@@ -28,21 +28,24 @@ function readLine() {
  */
 function vowelsAndConsonants(s) {
     
-    var vowels = ['a', 'e', 'i', 'o', 'u']
+    var vowels = ['a','e','i','o','u'];
+    var cons = "";
     for (var i = 0; i <s.length; i++)
         {
-            if (vowels.indexOf(s[i]) > -1)
+            if (vowels.includes(s[i]))
                 {
                     console.log(s[i]);
                 }
-        }
     
-    for (var j = 0; j < s.length; j++)
-        {
-            if (vowels.indexOf(s[j]) < 0)
+            else 
                 {
-                    console.log(s[j]);
+                     cons +=s[i]+ '\n';
+                  
                 }
+                
         }
-    
+        console.log(cons);
 }
+
+
+
